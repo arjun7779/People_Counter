@@ -86,6 +86,7 @@ while video.isOpened():
 
 
             cv.rectangle(frame, (x1,y1), (x2,y2), (255,0,0), thickness=1)
+            #for displaying tracking id
             #cvzone.putTextRect(frame,class_names[catagory]+" "+str(confidence), (x1,y1-10), scale=0.8, thickness=0)
 
 
