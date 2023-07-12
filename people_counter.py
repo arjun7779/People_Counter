@@ -24,8 +24,8 @@ video = cv.VideoCapture("path to video")
 
 #Use the model which suits the use case
 #give path to model of weight bestm.pt
-model = YOLO("/Users/thestash/PycharmProjects/Sulabh Sochalaya/visdroneWeights/bestm.pt")
-model_1 = YOLO("yolov8m.pt") #this will be downlaoded automatically
+model = YOLO("path to bestm.pt")
+model_1 = YOLO("yolov8m.pt") #this will be downladed automatically
 
 width = int(video.get(3))
 height = int(video.get(4))
