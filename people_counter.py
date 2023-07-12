@@ -21,13 +21,14 @@ class_names = [
 
 
 video = cv.VideoCapture("/Users/thestash/PycharmProjects/Sulabh Sochalaya/Data Vidoes/vid_1.mp4")
+
+#Use the model which suits the use case
 model = YOLO("/Users/thestash/PycharmProjects/Sulabh Sochalaya/visdroneWeights/bestm.pt")
 model_1 = YOLO("yolov8m.pt")
+
 width = int(video.get(3))
 height = int(video.get(4))
 
-print(width)
-print(height)
 
 x = res_adjustment(width, height)[0]
 y = res_adjustment(width, height)[1]
@@ -86,7 +87,7 @@ while video.isOpened():
 
 
             cv.rectangle(frame, (x1,y1), (x2,y2), (255,0,0), thickness=1)
-            #for displaying tracking id
+            #for displaying catagory, and conficence. Commented for the sake of neatness on the video
             #cvzone.putTextRect(frame,class_names[catagory]+" "+str(confidence), (x1,y1-10), scale=0.8, thickness=0)
 
 
@@ -99,6 +100,8 @@ while video.isOpened():
     for t_results in result_tracked:
         x1, y1, x2, y2, tracking_id = t_results
         x1, y1, x2, y2, tracking_id = int(x1), int(y1), int(x2), int(y2), int(tracking_id)
+      
+        #For displaying tracking id on the video
         #cvzone.putTextRect(frame, str(tracking_id), (x1, y1 - 30), scale=0.8, thickness=1)
 
         center_x, center_y = x1 + (x2 - x1) // 2, y1 + (y2 - y1) // 2
