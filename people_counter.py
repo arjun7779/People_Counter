@@ -20,9 +20,10 @@ class_names = [
   'motor']
 
 
-video = cv.VideoCapture("/Users/thestash/PycharmProjects/Sulabh Sochalaya/Data Vidoes/vid_1.mp4")
+video = cv.VideoCapture("path to video")
 
 #Use the model which suits the use case
+#give path to model of weight bestm.pt
 model = YOLO("/Users/thestash/PycharmProjects/Sulabh Sochalaya/visdroneWeights/bestm.pt")
 model_1 = YOLO("yolov8m.pt")
 
@@ -74,6 +75,8 @@ def change_PY(file, track_py):
 
 while video.isOpened():
     var, frame = video.read()
+
+    #model will be changed here model or model_1
     results = model(frame, stream=True, conf=0.3, device="mps") #remove classes later
     cv.line(frame, line_cords[0], line_cords[1], (0,255,0), thickness=4)
     detections = np.empty((0, 5))
