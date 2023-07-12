@@ -4,3 +4,6 @@ Make sure to give the correct path to you video dataset in video = cv.VideoCaptu
 
 
 For tracking the objects in video, SORT (Simple Online and Realtime Tracking) tracker. 
+
+
+Note: After running a video sucessfully, you may have to delete all data from record.txt manually before running a new video. (This will be patched and updated soon).
