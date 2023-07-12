@@ -25,7 +25,7 @@ video = cv.VideoCapture("path to video")
 #Use the model which suits the use case
 #give path to model of weight bestm.pt
 model = YOLO("/Users/thestash/PycharmProjects/Sulabh Sochalaya/visdroneWeights/bestm.pt")
-model_1 = YOLO("yolov8m.pt")
+model_1 = YOLO("yolov8m.pt") #this will be downlaoded automatically
 
 width = int(video.get(3))
 height = int(video.get(4))
@@ -77,7 +77,7 @@ while video.isOpened():
     var, frame = video.read()
 
     #model will be changed here model or model_1
-    results = model(frame, stream=True, conf=0.3, device="mps") #remove classes later
+    results = model(frame, stream=True, conf=0.3, device="mps") #device="mps" works only for macos use gpu or cpu for windows
     cv.line(frame, line_cords[0], line_cords[1], (0,255,0), thickness=4)
     detections = np.empty((0, 5))
     for r in results:
