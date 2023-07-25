@@ -32,7 +32,7 @@ class_names_1 = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 't
 #my classes YOLO person, car, motorcycle, bus, truck
 #           VisDrone pedestrian bicycle, car, truck, bus
 
-File = "path to video"
+File = "path to video" #enter full path
 file = File.split("/")[-1]
 file = file.split(".")[0]
 
