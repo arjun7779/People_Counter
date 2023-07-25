@@ -57,7 +57,7 @@ def plotting_bar(label, values, title, ylabel, save_file):
     plt.close()
 
 def save_graph(file, catagory):
-    dir = "/Users/thestash/PycharmProjects/Sulabh Sochalaya/Graphs/"
+    dir = "path to Graphs folder"
     try:
         os.mkdir(f"{dir}{file}/{catagory}")
         sub_dir = f"{dir}{file}/{catagory}"
@@ -144,7 +144,7 @@ def analysis(file, save_file):
     plotting(time, Bike, Bike_N, Bike_S, "No. of Bikes wrt Time (per sec.)", "No. of Bikes North wrt Time", "No. of Bikes South wrt Time", "Bikes", save_file)
     plotting(time, Bus, Bus_N, Bus_S, "No. of Busses wrt Time (per sec.)", "No. of Busses North wrt Time", "No. of Busses South wrt Time","Busses", save_file)
 
-File = "/Users/thestash/PycharmProjects/Sulabh Sochalaya/Records/Record_video.csv"
+File = "path to csv, we want to analyse"
 file = File.split("/")[-1]
 file = file.split(".")[0]
 file = file.replace("Record", "Graph")
