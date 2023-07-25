@@ -144,7 +144,7 @@ def analysis(file, save_file):
     plotting(time, Bike, Bike_N, Bike_S, "No. of Bikes wrt Time (per sec.)", "No. of Bikes North wrt Time", "No. of Bikes South wrt Time", "Bikes", save_file)
     plotting(time, Bus, Bus_N, Bus_S, "No. of Busses wrt Time (per sec.)", "No. of Busses North wrt Time", "No. of Busses South wrt Time","Busses", save_file)
 
-File = "path to csv, we want to analyse (in Records Folder)"
+File = "PATH TO RECORDS FOLDER/.CSV"#(FILE YOU WANA TO ANALYSE)
 file = File.split("/")[-1]
 file = file.split(".")[0]
 file = file.replace("Record", "Graph")
