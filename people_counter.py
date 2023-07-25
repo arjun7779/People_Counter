@@ -90,8 +90,7 @@ fourcc = cv.VideoWriter_fourcc(*'XVID')
 video_output = cv.VideoWriter(f"path to output video directory{file}.avi", fourcc, 30, (width, height))
 
 
-dir = "path to records directory (will hold csv records)"
-
+dir = "path to Records Folder (will hold csv records)"
 
 
 with open("record.csv", "w") as files:
